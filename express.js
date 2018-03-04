@@ -3,12 +3,17 @@ const app = express();
 const env = require('dotenv');
 const axios = require('axios');
 
-app.post('/send/:encryptedKey', function(req, res) {
+var a = '',
+    b = '';
 
+app.get('/receive-alice-key/:publicKey', function(req, res) {
+    a = req.params.publicKey;
+    res.send(a);
 });
 
-app.post('/receive/:encryptedKey', function(req, res) {
-
+app.get('/receive-bob-key/:publicKey', function(req, res) {
+    b = req.params.publicKey;
+    res.send(b);
 });
 
 app.listen(3000, function() {

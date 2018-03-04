@@ -6,3 +6,9 @@ const aliceKeyPair = {
 }
 
 aliceKeyPair.public = getKey.public(aliceKeyPair.private);
+
+console.log('Alice\'s keypair is' + aliceKeyPair);
+
+module.exports = {
+    keyPair: aliceKeyPair
+}
