@@ -1,5 +1,5 @@
 const params = require('./_params');
-const powMod = require('./powByModulus');
+const powMod = require('./pow-mod');
 
 function getPrivateKey() {
     const max = params.modulus - 2;

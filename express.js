@@ -3,17 +3,20 @@ const app = express();
 const env = require('dotenv');
 const axios = require('axios');
 
-var a = '',
-    b = '';
+const Participant = require('./src/participant');
+
+var alice = new Participant('alice'),
+    bob = new Participant('bob');
 
 app.get('/receive-alice-key/:publicKey', function(req, res) {
-    a = req.params.publicKey;
-    res.send(a);
+    bob.receivedKey = req.params.publicKey;
+    res.send(bob.receivedKey);
 });
 
 app.get('/receive-bob-key/:publicKey', function(req, res) {
-    b = req.params.publicKey;
-    res.send(b);
+    alice.receivedKey = req.params.publicKey;
+    alice.generateSecret();
+    res.send(alice.receivedKey);
 });
 
 app.listen(3000, function() {
