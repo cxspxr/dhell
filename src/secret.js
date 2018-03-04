@@ -1,5 +1,6 @@
 const params = require('./_params');
+const powMod = require('./powByModulus');
 
 module.exports = function(receivedPublicKey, privateKey) {
-    return Math.pow(receivedPublicKey, privateKey) % params.modulus;
+    return powMod(receivedPublicKey, privateKey, params.modulus);
 }

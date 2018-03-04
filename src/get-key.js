@@ -1,4 +1,5 @@
 const params = require('./_params');
+const powMod = require('./powByModulus');
 
 function getPrivateKey() {
     const max = params.modulus - 2;
@@ -8,7 +9,7 @@ function getPrivateKey() {
 }
 
 function getPublicKey(privateKey) {
-    return Math.pow(params.generator, privateKey) % params.modulus;
+    return powMod(params.generator, privateKey, params.modulus);
 }
 
 module.exports = {
