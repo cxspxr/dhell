@@ -8,19 +8,17 @@ npm i
 ```
 
 ## Usage
-Make sure you have **free** `:3000` in order to run `express` server. Otherwise,  
-change the `port` constant inside the `express.js`.
+Make sure you have **free** `:3000` in order to run `express` server. Otherwise, change the `port` constant inside the `express.js`.
 
 ```bash
 node express.js
 ```
 
 ## Routes
-I've set up chat with `GET` routes, just to make things simple and to emphasize  
-publicity of distribution channels.  
+I've set up chat with `GET` routes, just to make things simple and to emphasize publicity of distribution channels.  
 
-There are two participants called `alice` and `bob`. You can find them in `express.js` file.  
-So you can navigate to one of these URLs using the showcase with `axios` in `express.js`  
+There are two participants called `alice` and `bob`. You can find them in `express.js` file.
+So you can navigate to one of these URLs using the showcase with `axios` in `express.js`
 or using your browser:  
 
 * `/send/message/:from/:to/:message` - sends a message. `:from` is the name `alice` or `bob`  
