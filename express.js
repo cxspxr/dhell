@@ -66,10 +66,12 @@ app.get('/inbox/:whose', function(req, res) {
     res.send(liner.get());
 });
 
-app.listen(3000, function() {
-    console.log('listening 3000');
+const port = 3000;
 
-    axios.defaults.baseURL = 'http://localhost:3000';
+app.listen(port, function() {
+    console.log('listening ' + port);
+
+    axios.defaults.baseURL = 'http://localhost:' + port;
     axios.get('/send-public-key/alice/bob');
     axios.get('/send-public-key/bob/alice');
     axios.get('/send-message/bob/alice/Hola');
