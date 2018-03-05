@@ -1,5 +1,5 @@
-# Diffie-Hellman Key Exchange Simple P2P Chat in NodeJS
-Just a simple example of how `Diffie-Hellman Key Exchange` can be implemented in P2P Chat.
+# Diffie-Hellman Key Exchange Simple End-to-End Chat in NodeJS
+Just a simple example of how `Diffie-Hellman Key Exchange` can be implemented in End-to-End Chat.
 
 ## Installation
 Make sure you have **free** `:3000` in order to run `express` server. Otherwise,  
