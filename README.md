@@ -2,14 +2,20 @@
 Just a simple example of how `Diffie-Hellman Key Exchange` can be implemented in End-to-End Chat.
 
 ## Installation
-Make sure you have **free** `:3000` in order to run `express` server. Otherwise,  
-change the `port` constant inside the `express.js`.  
 
 ```bash
-    npm i
+npm i
 ```
 
 ## Usage
+Make sure you have **free** `:3000` in order to run `express` server. Otherwise,  
+change the `port` constant inside the `express.js`.
+
+```bash
+node express.js
+```
+
+## Routes
 I've set up chat with `GET` routes, just to make things simple and to emphasize  
 publicity of distribution channels.  
 
