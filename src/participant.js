@@ -10,7 +10,11 @@ module.exports = function(name) {
     this.keyPair.private = getKey.private();
     this.keyPair.public = getKey.public(this.keyPair.private);
 
+    this.inbox = [];
+
+    this.receiveMessage = function(message) { this.inbox.push(message); }
+
     this.generateSecret = function() {
-        this.secret = powMod(this.receivedKey, this.privateKey, params.modulus);
+        this.secret = powMod(this.receivedKey, this.keyPair.private, params.modulus);
     }
 }
